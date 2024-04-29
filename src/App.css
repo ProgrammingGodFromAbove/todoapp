@@ -1,38 +1,190 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #70B8CF;
+  font-family: "Inria Sans";
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  
+ 
+
+  width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+
+}
+
+.header h2 {
+  font-weight: 400;
+}
+.header h1 {
+  font-size: 64px;
+  position: relative;
+  margin: 0;
+  font-weight: normal;
+}
+
+h1 span {
+  font-size: 24px;
+  font-weight: 300;
+  position: absolute;
+  bottom: -20px;
+  left: 24%;
+}
+
+.todos {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+ 
+}
+
+.today, .tomorrow, .everyday, .monthly {
+
+  height: 650px;
+}
+
+.monthly {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+.monthly h3 {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.monthly ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.monthly li {
+  font-size: 16px;
+}
+.todos h2 {
+  font-size: 40px;
+  font-weight: 400;;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  gap: 34px;
+  /* height: 100%;     */
+}
+
+.monthly ul {
+  gap: 10px;
+}
+
+li input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  
+}
+li {
+  font-size: 24px;
+  font-weight: 300;
+  color: #3A3A3A;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.today > h2 {
+  position: relative;
+}
+.today > h2 > span {
+  position: absolute;
+  left: -42px;
+}
+
+input[type="text"] {
+  height: 58px;
+  width: 1042px;
+  outline: none;
+  border: none;
+  font-size: 24px;
+  padding: 10px 20px;
+  font-weight: 300;
+  color: #3a3a3a;
+}
+
+
+.input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  gap: 10px;
+}
+
+.plus {
+  font-size: 64px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  transform: translateY(-5px);
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+  font-size: 32px;
+}
+.goal-text {
+  font-size: 14px;
+  font-weight: 300;
+  color:#3A3A3A;
+  /* width: 300px; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header h2 {
+  font-size:32px;
+}
+
+.point {
+  position: absolute;
+  left: -42px;
+  display: none;
+}
+
+.point-show {
+  display: block;
+}
+h2, h3 {
+  position: relative;
+}
+.completed span {
+  text-decoration: line-through;
+}
+.strike-through {
+  text-decoration: line-through;
+  width: 3px;
+  color: #b9293f; /* Example: change the color to grey */
+  /* Add any other styles you want for your strikethrough effect */
 }
